@@ -1,0 +1,60 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+:root {
+  --primary: #06283D;
+}
+
+h1{
+  text-transform: uppercase;
+}
+
+a {
+  color: #00B7FF;
+}
+
+nav {
+  text-align: center;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+nav li {
+  display: inline;
+  padding: 10px;
+}
+
+.active {
+  background: #eee;
+  color:var(--primary);
+}
+
+#welcome {
+  text-align: center;
+}
+.textCenter {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/*
+.navbar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}*/
