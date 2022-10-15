@@ -4,6 +4,8 @@ body {
 }
 :root {
   --primary: #06283D;
+  --shadow: 0 5px 10px rgba(0,0,0,0.1);
+  --grayBorder : #696e93;
 }
 
 h1{
@@ -38,26 +40,6 @@ nav li {
   background: #eee;
   color:var(--primary);
 }
-
-#welcome {
-  text-align: center;
-}
-.textCenter {
-  text-align: center;
-}
-
-.container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-/*
-.navbar {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}*/
 #proj1 {
   margin-top: 50px;
   text-align: center;
@@ -82,4 +64,162 @@ nav li {
 #serv{
   margin-top: 50px;
   text-align: center;
+}
+#welcome {
+  text-align: center;
+}
+.textCenter {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap:10px
+}
+.badge{
+  padding:8px 10px;
+  background:var(--primary);
+  color:white;
+  font-size: 10px;
+  border-radius:5px;
+}
+/*
+ business page css
+*/
+.businessContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center ;
+  gap:20px;
+  padding: 20px;  
+}
+.cardList{
+  display: flex;
+  gap:30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.businessCard{
+  flex: 0 0 32%;
+  padding: 20px;
+  gap:20px;
+  background:var(--grayBorder);
+  box-shadow:var(--shadow);
+  display: flex;
+  flex-direction: column;
+  border-radius:10px;
+}
+
+/*
+ btns and warning
+*/
+.warning{
+  padding: 10px 30px;
+  background:#38E54D;
+  border-radius:5px;
+  color:#1C6758;
+  text-align: center;
+}
+.btnRow{
+  display: flex;
+  gap: 20px;
+}
+.updateButton {
+  position: relative;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background:var(--primary);
+  color:#fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.backBtn {
+  position: relative;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background:#eee;
+  color:var(--primary);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.deleteBtn {
+  position: relative;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background:#F96666;
+  color:var(--primary);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.createBtn {
+  position: relative;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background:var(--primary);
+  color:#fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+/*
+.navbar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}*/
+
+
+
+/*
+Edit contact page 
+*/
+.loginForm {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.submitBtn {
+  position: relative;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background:var(--primary);
+  color:#fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.submitBtn:hover {
+  box-shadow: var(--shadow);
+} 
+.appInput{
+  display: flex;
+  align-items:center;
+  gap: 15px;
+}
+.appInput label {
+  font-size: 14px;
+  font-weight: 500;
+}
+.appInput input {
+  padding: 8px 12px;
+  border: 1px solid var(--grayBorder)
 }

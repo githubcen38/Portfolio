@@ -1,24 +1,34 @@
 var express = require('express');
 var router = express.Router();
+var homeController = require('../controllers/index');
+var passport = require("passport")
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'home' });
-});
+router.get('/', homeController.indexPage);
 
-router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'about' });
-});
+router.get('/about', homeController.aboutPage);
 
-router.get('/project', function(req, res, next) {
-  res.render('project', { title: 'project' });
-});
+router.get('/project', homeController.projectPage);
 
-router.get('/services', (req, res, next)=> {
-  res.render('services', {title: 'services'})
-});
+router.get('/services', homeController.servicesPage);
 
-router.get('/contact', (req, res, next)=> {
-  res.render('contact', {title: 'contact'})
-});
+router.get('/contact',homeController.contactPage);
+
+// get  
+router.get('/login',homeController.getLogin);
+
+
+router.post('/login', passport.authenticate('local', {
+  successRedirect: '/businessContacts',
+  failureRedirect: '/login',
+  failureFlash: true,
+  failureMessage: "Invalid username or password",
+}));
+
+
+router.get('/logout', homeController.logoutUser);
+
+
+router.post('/register', homeController.registerUser);
+
 module.exports = router;

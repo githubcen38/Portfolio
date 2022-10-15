@@ -1,0 +1,27 @@
+<% include  partial/header.ejs %>
+<% include  partial/nav.ejs %>
+<div>
+    <h1 class="textCenter"> Login </h1>
+</div>
+<form method="post" class="loginForm">
+    <div class="appInput">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" />
+    </div>
+    <div class="appInput">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+    </div>
+    <div>
+      <button type="submit" class="submitBtn"> 
+        Login
+      </button>
+    </div>
+  </form>
+  
+  <% if(message.length > 0) { %>
+    <div class="alert alert-danger">
+      <%= message %>
+    </div>
+  <% } %>
+<% include  partial/footer.ejs %>
