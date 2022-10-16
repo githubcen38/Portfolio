@@ -1,0 +1,19 @@
+<% include  partial/header.ejs %>
+<% include  partial/nav.ejs %>
+<div class="businessContainer">
+ <h1 class="title">Business Contact <span class="badge"><%= businessContacts.length %></span> <a class="createBtn"href="/businessContacts/create">Add Contact</a></h1>
+ <div class="cardList">
+    <% for(let i = 0;i<businessContacts.length;i++) {%>
+      <div class="businessCard">
+        <h3><span>Name:</span> <%= businessContacts[i].name %></p>
+        <p><span>Email:</span> <%= businessContacts[i].email %></p>
+        <p><span>Phone:</span> <%= businessContacts[i].phoneNumber %></p>
+        <div class="btnRow">
+        <p><a class="updateButton"href="/businessContacts/<%= businessContacts[i]._id%>">Update</a></p>
+        <p><a class="deleteBtn"href="/businessContacts/delete/<%= businessContacts[i]._id%>">Delete</a></p>
+        </div>  
+      </div>
+      <% } %>
+  </div>  
+</div>
+<% include  partial/footer.ejs %>

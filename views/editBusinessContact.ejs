@@ -1,0 +1,48 @@
+<% include  partial/header.ejs %>
+<% include  partial/nav.ejs %>
+<div class="businessContainer">
+ <h1 class="title">
+  <%if( title === "Update Contact"){%>
+  Update Business Contact
+  <%}else{%>
+    Create Business Contact
+   <%}%>
+</h1>
+      <form method="post" class="loginForm">
+        <div class="appInput">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" value="<%= businessContact.name %>" />
+        </div>
+        <div class="appInput">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" value="<%= businessContact.email %>"/>
+        </div>
+        <div class="appInput">
+          <label for="phoneNumber">Phone:</label>
+          <input name="phoneNumber" id="phoneNumber" value="<%= businessContact.phoneNumber %>"/>
+        </div>
+        <div class="btnRow">
+          <button type="submit" class="submitBtn"> 
+            <%if( title === "Update Contact"){%>
+              Update 
+              <%}else{%>
+                Create 
+               <%}%>
+          </button>
+          <a href="/businessContacts"class="backBtn"> 
+            Cancel
+          </a>
+          <%if(businessContact){%>
+            <a href="/businessContacts/delete/<%= businessContact._id %>"class="deleteBtn"> 
+              Delete
+            </a>
+          <%}%>
+        </div>
+      </form>
+    <!-- Displaying message if it has -->
+    <% if(message.length > 0){%>
+     <p class="warning"><%= message%></p>
+    <%}%>
+  </div>  
+</div>
+<% include  partial/footer.ejs %>  

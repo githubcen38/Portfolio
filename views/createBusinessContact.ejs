@@ -1,0 +1,29 @@
+<% include  partial/header.ejs %>
+<% include  partial/nav.ejs %>
+<div class="businessContainer">
+ <h1 class="title">Update Business Contact</h1>
+      <form method="post" class="loginForm">
+        <div class="appInput">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name"  />
+        </div>
+        <div class="appInput">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="appInput">
+          <label for="phoneNumber">Phone:</label>
+          <input name="phoneNumber" id="phoneNumber" />
+        </div>
+        <div class="btnRow">
+          <button type="submit" class="submitBtn"> 
+            Update
+          </button>
+          <a href="/businessContacts"class="backBtn"> 
+            back
+          </a>
+        </div>
+      </form>
+  </div>  
+</div>
+<% include  partial/footer.ejs %>  

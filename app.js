@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var flash = require('connect-flash');
 
+//add mongoose and db connection url
 var mongoose = require('mongoose');
 var config = require('./config/globals');
 
@@ -14,6 +15,8 @@ var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var businessContactRouter = require('./routes/businessContacts')
+
 
 var app = express();
 
@@ -52,6 +55,7 @@ require('./config/passport')(passport);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/businessContacts',businessContactRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

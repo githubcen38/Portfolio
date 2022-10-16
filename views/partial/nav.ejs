@@ -1,5 +1,8 @@
 <nav>
     <img src="/images/logo.png" alt="" height="128" width="128">
+    <% if(user) { %>
+        <h3> Welcome,<%= user.username %></h3>
+    <% } %>  
     <ul class="navbar">
         <li><a href="/" class=<%= title.includes("home") ? "active":"" %>>Home</a></li>
         <li><a href="/about" class=<%= title.includes("about") ? "active":"" %>>About Me</a></li>
@@ -12,6 +15,5 @@
          <% } else {%>   
             <li><a href="/login" class=<%= title.includes("login") ? "active":"" %>>Login</a></li>
          <% } %>   
-       
     </ul>
 </nav>
